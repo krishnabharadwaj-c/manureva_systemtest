@@ -1,0 +1,219 @@
+<div class="parent_container mw-100 text-uppercase">
+    <div class="position-absolute top-0 start-0">
+      salesforce
+    </div>
+    <div class="position-absolute top-0 end-0">
+      reej academy
+    </div>
+    <div class="position-absolute top-50 start-50 translate-middle">
+      Vous aidez à grandir est notre plus belle réussite.
+    </div>
+    <div class="position-absolute bottom-0 start-0">
+      TRansformation digitale
+    </div>
+    <div class="position-absolute bottom-0 end-0">
+      Sécurité
+    </div>
+</div>
+<div class="container mw-100">
+  <div class="header-txt pt-2">
+    <p>Notre accompagnement</p>
+  </div>
+  <div class="subHeader-txt">
+    <p>Nos différentes expertises nous permettent de vous accompagner dans votre croissance par le biai de différents axes :  
+  </p>
+  </div>
+  <div class="row">
+  <div class="col-sm col-xs-12" *ngFor="let c of cardToDisplay">
+  <div class="card" style="width: 10rem;height:170px;">
+    <img class="card-img-top mt-2 h-25 w-50 d-inline-block cardimage" [src]="c.imageDisplay" alt="Card image cap">
+    <div class="card-body d-flex flex-column">
+      <div class="row">
+      <h5 class="card-title card-header-txt">{{c.title}}</h5>
+      </div>
+      <div class="row mt-2 mb-2">
+      <p class="card-text subHeader-txt">{{c.text}}</p>
+    </div>
+      <button class="align-self-start btn btn-lg btn-block btn-warning subHeader-txt w-100" style="margin-top: auto;">{{c.buttontext}}</button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="footer_container mt-2">
+  <div class="row">
+    <div class="col-4 mt-2" style="padding-left: 30px;">
+    <p class="header-txt">Prets pour votre transformation?</p> 
+  </div>
+  <div class="col-8 mt-4">
+    <button class="align-self-start btn btn-lg btn-block btn-warning subHeader-txt w-50" data-toggle="modal" data-target="#exampleModal" style="margin-top: auto;">Contactez-nous</button>
+  </div>
+</div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header p-0">
+        <p class="modal-title" id="exampleModalLabel"><b>CONTACT FORM</b></p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body py-0">
+        <form class="form" [formGroup]="registerForm" (ngSubmit)="validate()">
+          <div class="row">
+            <div class="col">
+                <div  class="form-group">
+                  <label for="nom" class="col-form-label">NOM:</label>
+                  <input type="text" class="form-control" id="nom" formControlName="nom">
+                  <span class="text-danger" *ngIf="(registerFormControl.nom.touched || submitted) && registerFormControl.nom.errors?.required">
+                    Nom is required </span>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label for="prenom" class="col-form-label">PRENOM:</label>
+                  <input type="text" class="form-control" id="prenom" formControlName="prenom">
+                  <span class="text-danger" *ngIf="(registerFormControl.prenom.touched || submitted) && registerFormControl.prenom.errors?.required">
+                    Prenom is required </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col">
+              <div class="form-group">
+            <label for="societe" class="col-form-label">SOCIETE:</label>
+            <input type="text" class="form-control" id="societe" formControlName="societe">
+            <span class="text-danger" *ngIf="(registerFormControl.societe.touched || submitted) && registerFormControl.societe.errors?.required">
+              Societe is required </span>
+          </div>
+        </div>
+        <div class="col">
+        <div class="form-group">
+          <label for="email" class="col-form-label">EMAIL:</label>
+          <input type="text" class="form-control" id="email" formControlName="email">
+          <span class="text-danger" *ngIf="(registerFormControl.email.touched || submitted) && registerFormControl.email.errors?.required">
+            Email is required </span>
+        </div>
+      </div>
+      </div>
+      <div class="row">
+        <div class="col">
+            <div class="form-group">
+          <label for="telephone" class="col-form-label">TELEPHONE:</label>
+          <input type="text" class="form-control" id="telephone" formControlName="telephone">
+          <span class="text-danger" *ngIf="(registerFormControl.telephone.touched || submitted) && registerFormControl.telephone.errors?.required">
+            Telephone is required </span>
+        </div>
+      </div>
+      <div class="col">
+      <div class="form-group">
+        <label for="sujet" class="col-form-label">SUJET:</label>
+        <input type="text" class="form-control" id="sujet" formControlName="sujet">
+        <span class="text-danger" *ngIf="(registerFormControl.sujet.touched || submitted) && registerFormControl.sujet.errors?.required">
+          Sujet is required </span>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="votremessage" class="col-form-label">VOTRE MESSAGE:</label>
+          <textarea class="form-control" id="votremessage" formControlName="votremessage"></textarea>
+          <span class="text-danger" *ngIf="(registerFormControl.votremessage.touched || submitted) && registerFormControl.votremessage.errors?.required">
+            Votre Message is required </span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="modal-footer pt-1 pb-0">
+      <div class="form-group">
+        <div class="row">
+          <div class="col">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+      <div class="col">
+      <button type="submit" class="btn btn-warning">Envoyer</button>
+    </div>
+    </div>
+    </div>
+    </div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="container-lg my-3">
+  <div id="myCarousel" class="carousel slide" data-mdb-items="2" data-bs-ride="carousel">
+      <div class="carousel-inner w-100 mx-auto">
+          <div class="carousel-item active">
+            <div class="row ">
+              <div class="col-sm">
+                <img src="../assets/images/logo1.png" class="d-block w-100" alt="Slide 1">
+              </div>
+              <div class="col-sm">
+                <img src="../assets/images/logo2.png" class="d-block w-100" alt="Slide 2">
+              </div>
+              <div class="col-sm">
+                <img src="../assets/images/logo3.png" class="d-block w-100" alt="Slide 3">
+              </div>
+            </div>
+          </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-sm">
+                  <img src="../assets/images/logo4.png" class="d-block w-100" alt="Slide 4">
+                </div>
+                <div class="col-sm">
+                  <img src="../assets/images/logo2.png" class="d-block w-100" alt="Slide 2">
+                </div>
+                <div class="col-sm">
+                  <img src="../assets/images/logo1.png" class="d-block w-100" alt="Slide 1">
+                </div>    
+              </div>
+            </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#myCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+      </a>
+  </div>
+</div>
+
+<div class="footer_container mt-2">
+  <div class="row">
+    <div class="col-6 mt-4" style="padding-left: 30px;">
+      <button class="btn btn-lg btn-block btn-outline-warning subHeader-txt w-75" style="margin-top: auto;">Contactez-nous</button>
+    </div>
+    <div class="col-6">
+    </div>
+  </div>
+  <div class="row mt-3" style="padding-left: 20px;">
+    <div class="col-sm col-xs-12" >
+    <p class="main-txt"><b>Adresse</b><br>
+      <span class="sub-txt">SPACES, Cours Valmy 1-7, 92800 La Defense</span></p> 
+  </div>
+  <div class="col-sm col-xs-12">
+    <p class="sub-txt">Certifie Organisme de Formation n*11922319592</p> 
+  </div>
+  <div class="col-sm col-xs-12">
+    <p class="sub-txt">Certifie data lock (loi du 5mars 2014)</p> 
+  </div>
+  <div class="col-sm col-xs-12">
+    <p class="sub-txt">Copyright 2020 reejconsulting Tours droit services</p> 
+  </div>
+  </div>
+</div>
+
+
+
+
+<router-outlet></router-outlet>

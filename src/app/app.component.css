@@ -1,0 +1,75 @@
+.parent_container {
+    background-image: url('../assets/images/Background@4x.png');
+    height: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size:0.4rem;
+    font-weight:bold;
+    color: white;
+    position:relative;
+  }
+
+  .footer_container {
+    display:block;
+    background-color: #0000A3;
+    font-size:0.4rem;
+    font-weight:bold;
+    color: white;
+  }
+
+ #exampleModal{
+    height: 95%;
+    font-size: 0.4em;
+    background-color: #0000A3;
+  }
+
+
+  .form-control{
+    font-size: 1em;
+    padding: 0!important;
+  }
+
+  .modal-footer > .form-group >.row > .col > .btn{
+    font-size: 1em;
+    padding: 20%!important;
+  }
+
+  .header-txt{
+      font-size: 1rem;
+      font-weight: bolder;
+  }
+
+  .card-header-txt{
+    font-size: 0.7rem;
+    font-weight: bolder;
+}
+
+  .subHeader-txt{
+      font-size: 0.5rem;
+  }
+
+  .main-txt{
+      font-size: 0.5rem;
+      
+  }
+  .sub-txt{
+    font-size: 0.3rem;
+}
+
+  .cardimage{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .carousel-item{
+    min-height: 50%;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+ }
+ 
+ .carousel-control-next-icon {
+   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+ }

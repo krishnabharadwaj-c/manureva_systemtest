@@ -1,0 +1,23 @@
+{
+    "cards-data":[
+        {
+            "title":"Salesforce",
+            "text":"Nous vous accompagnons  dans votre independance.",
+            "imageDisplay":"../assets/images/salesforce.PNG",
+            "buttontext":"découvrir Salesforce"
+        },
+        {
+            "title":"Transformation digitale",
+            "text":"Vous accompagnez vers  les enjeux de demain.",
+            "imageDisplay":"../assets/images/transformationdigital.PNG",
+            "buttontext":"Se reconvertir"
+        },
+        {
+            "title":"Sécurité",
+            "text":"Reprenez le controle  de votre SI.",
+            "imageDisplay":"../assets/images/security.PNG",
+            "buttontext":"Se protéger"
+        }
+    ]
+}
+
